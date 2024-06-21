@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import OrderManagement from './components/OrderManagement';
+import OrderDetails from './components/OrderDetails';
+import DeliveryTracking from './components/DeliveryTracking';
+import Analytics from './components/Analytics';
+import './App.css'; // Import the CSS file
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <div className="container">
+          <Routes>
+            <Route path="/orders" element={<OrderManagement />} />
+            <Route path="/order/:orderId" element={<OrderDetails />} />
+            <Route path="/delivery" element={<DeliveryTracking />} />
+            <Route path="/analytics" element={<Analytics />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,68 @@
+/* src/components/OrderManagement.css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial, sans-serif';
+    text-align: left;
+  }
+  
+  thead tr {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .same-day {
+    background-color: #ffebee; /* Light red */
+  }
+  
+  .inter-state {
+    background-color: #e3f2fd; /* Light blue */
+  }
+  
+  .international {
+    background-color: #e8f5e9; /* Light green */
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  a {
+    color: #d9534f; /* Bootstrap red color */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .filter-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .filter-container label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .filter-container select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
